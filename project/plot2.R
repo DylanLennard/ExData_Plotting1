@@ -18,7 +18,7 @@ if(!file.exists(fileName)){
 }
 
 ### read in document
-DT <- fread("household_power_consumption.txt", sep = ";", na.strings="?")
+DT <- fread(fileName, sep = ";", na.strings="?")
 
 ### subset by dates 02/01/2007-02/02/2007
 DT[, Date:=as.Date(Date, format = "%d/%m/%Y")]
